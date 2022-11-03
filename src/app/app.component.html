@@ -1,4 +1,4 @@
-<div class="header">
+<!-- <div class="header">
   <p-menubar [model]="kp" [style]="{'background-color': 'transparent'}" class="menuBar">
     <ng-template pTemplate="start" class="logoContainer">
       <img src="/assets/images/xe.png" height="60" class="p-mr-2" alt="logo">
@@ -18,7 +18,35 @@
     <button pButton type="button" label="Tools" style="height: 40px;"></button>
     <button pButton type="button" label="Resources" style="height: 40px;"></button>
   </div>
-</div>
+</div> -->
+<header class="header">
+  <div class="container">
+    <div class="logoContainer">
+      <img src="/assets/images/xe.png" alt="Logo">
+    <div class="firstMenu">
+      <ul>
+        <li><a href="">Personal</a></li>
+        <li><a href="">|</a></li>
+        <li><a href="">Business</a></li>
+      </ul>
+    </div>
+    </div>
+    <div class="middleMenuContainer menu">
+      <ul>
+        <li><a href="">Send Money</a></li>
+        <li><a href="">Converter</a></li>
+        <li><a href="">Currency API</a></li>
+        <li><a href="">Tools</a></li>
+        <li><a href="">Resources</a></li>
+      </ul>
+    </div>
+    <div class="loginContainer login">
+      <a href="">Sign In</a>
+      <a href="" class="register">Register</a>
+    </div>
+  </div>
+
+</header>
 
 <div class="coverContainer">
   <h1>Xe Currency Converter</h1>
@@ -26,46 +54,91 @@
 </div>
 
 <div class="cardContainer">
-  <p-card class="p-card">
+  <p-card styleClass="pCard" class="pCard">
     <div class="converter-card">
       <p-tabMenu [model]="items2"></p-tabMenu>
     </div>
     <div class="p-field p-col-12 p-md-3 amount">
-      <label for="locale-us">Amount</label>
-      <p-inputNumber [(ngModel)]="value2" inpudId="locale-us" mode="decimal" locale="en-US" [minFractionDigits]="2"></p-inputNumber>
+      <label class="lable" for="locale-us" style="color:black;font-weight:bold;">Amount</label>
+      <p-inputNumber [(ngModel)]="value2" inpudId="locale-us" mode="decimal" locale="en-US" [minFractionDigits]="2">
+      </p-inputNumber>
     </div>
     <div class="cascadContainer">
-          <p-cascadeSelect [(ngModel)]="selectedCity2" [options]="countries" optionLabel="cname" optionGroupLabel="name"
-      [optionGroupChildren]="['states', 'cities']" [style]="{'minWidth': '14rem'}" placeholder="Select a City"
-      label="From" class="cascade">
-      <ng-template pTemplate="option" let-option>
-        <div class="country-item">
-          <img *ngIf="option.states" src="assets/showcase/images/demo/flag/flag_placeholder.png"
-            [class]="'flag flag-' + option.code.toLowerCase()" />
-          <i class="pi pi-compass mr-2" *ngIf="option.cities"></i>
-          <i class="pi pi-map-marker mr-2" *ngIf="option.cname"></i>
-          <span>{{option.cname || option.name}}</span>
-        </div>
-      </ng-template>
-    </p-cascadeSelect>
 
-    <p-cascadeSelect [(ngModel)]="selectedCity2" [options]="countries" optionLabel="cname" optionGroupLabel="name"
-      [optionGroupChildren]="['states', 'cities']" [style]="{'minWidth': '14rem'}" placeholder="Select a City"
-      label="From" class="cascade">
-      <ng-template pTemplate="option" let-option>
-        <div class="country-item">
-          <img *ngIf="option.states" src="assets/showcase/images/demo/flag/flag_placeholder.png"
-            [class]="'flag flag-' + option.code.toLowerCase()" />
-          <i class="pi pi-compass mr-2" *ngIf="option.cities"></i>
-          <i class="pi pi-map-marker mr-2" *ngIf="option.cname"></i>
-          <span>{{option.cname || option.name}}</span>
-        </div>
-      </ng-template>
-    </p-cascadeSelect>
+
+
+      <!-- <p-cascadeSelect [(ngModel)]="selectedCity2" [options]="countries" optionLabel="cname" optionGroupLabel="name"
+        [optionGroupChildren]="['states', 'cities']" [style]="{'minWidth': '14rem'}" placeholder="Select a City"
+        label="From" class="cascade">
+        <ng-template pTemplate="option" let-option>
+          <div class="country-item">
+            <img *ngIf="option.states" src="assets/showcase/images/demo/flag/flag_placeholder.png"
+              [class]="'flag flag-' + option.code.toLowerCase()" />
+            <i class="pi pi-compass mr-2" *ngIf="option.cities"></i>
+            <i class="pi pi-map-marker mr-2" *ngIf="option.cname"></i>
+            <span>{{option.cname || option.name}}</span>
+          </div>
+        </ng-template>
+      </p-cascadeSelect>
+
+      <p-cascadeSelect [(ngModel)]="selectedCity2" [options]="countries" optionLabel="cname" optionGroupLabel="name"
+        [optionGroupChildren]="['states', 'cities']" [style]="{'minWidth': '14rem'}" placeholder="Select a City"
+        label="From" class="cascade">
+        <ng-template pTemplate="option" let-option>
+          <div class="country-item">
+            <img *ngIf="option.states" src="assets/showcase/images/demo/flag/flag_placeholder.png"
+              [class]="'flag flag-' + option.code.toLowerCase()" />
+            <i class="pi pi-compass mr-2" *ngIf="option.cities"></i>
+            <i class="pi pi-map-marker mr-2" *ngIf="option.cname"></i>
+            <span>{{option.cname || option.name}}</span>
+          </div>
+        </ng-template>
+      </p-cascadeSelect> -->
+
+
+      <!-- =========================================== -->
+
+      <label class="lable" for="locale-us" style="color:black;font-weight:bold;">From</label>
+      <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [filter]="true" filterBy="name"
+        [showClear]="true" placeholder="Select a Country" class="cascade">
+        <ng-template pTemplate="selectedItem">
+          <div class="country-item country-item-value" *ngIf="selectedCountry">
+            <!-- <img src="assets/showcase/images/demo/flag/flag_placeholder.png"
+              [class]="'flag flag-' + selectedCountry.code.toLowerCase()" /> -->
+            <div>{{selectedCountry.name + selectedCountry.code}}</div>
+          </div>
+        </ng-template>
+        <ng-template let-country pTemplate="item">
+          <div class="country-item">
+            <div>{{country.code +" - "+country.name}}</div>
+          </div>
+        </ng-template>
+      </p-dropdown>
+      <label class="lable" for="locale-us" style="color:black;font-weight:bold;">To</label>
+      <p-dropdown [options]="countries" [(ngModel)]="selectedCountry2" optionLabel="name" [filter]="true" filterBy="name"
+        [showClear]="true" placeholder="Select a Country" class="cascade">
+        <ng-template pTemplate="selectedItem">
+          <div class="country-item country-item-value" *ngIf="selectedCountry2">
+            <!-- <img src="assets/showcase/images/demo/flag/flag_placeholder.png"
+              [class]="'flag flag-' + selectedCountry.code.toLowerCase()" /> -->
+            <div>{{selectedCountry2.name + selectedCountry2.code}}</div>
+          </div>
+        </ng-template>
+        <ng-template let-country pTemplate="item">
+          <div class="country-item">
+            <div>{{country.code +" - "+country.name}}</div>
+          </div>
+        </ng-template>
+      </p-dropdown>
+
+      <!-- ========================================== -->
+      
     </div>
-
+      <div class="result">
+        <h1 style="font-family:sans-serif">Result : {{totalAngularPackages}}</h1>
+      </div>
     <div class="footer">
-      <p-button label="Convert"></p-button>
+      <p-button label="Convert" (onClick)="callApi()"></p-button>
     </div>
   </p-card>
 </div>

@@ -10,6 +10,10 @@ import {TabMenuModule} from 'primeng/tabmenu';
 import {InputNumberModule} from 'primeng/inputnumber';
 import { FormsModule } from '@angular/forms';
 import {CascadeSelectModule} from 'primeng/cascadeselect';
+import { DropdownModule } from 'primeng/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +29,10 @@ import {CascadeSelectModule} from 'primeng/cascadeselect';
     InputNumberModule,
     FormsModule,
     CascadeSelectModule,
+    DropdownModule,
+    BrowserAnimationsModule,
+    HttpClientModule
+
 
   ],
   providers: [],
