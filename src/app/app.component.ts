@@ -6,6 +6,8 @@ import { MenuItem, PrimeIcons } from 'primeng/api';
 import { SelectItem } from 'primeng/api';
 import { SelectItemGroup } from 'primeng/api';
 import { HttpClient } from '@angular/common/http';
+import {MenuModule} from 'primeng/menu';
+
 
 import { ConverterService } from './converter.service';
 
@@ -37,6 +39,11 @@ export class AppComponent {
     //   selectedCity1: any;
 
     //   selectedCity2: any;
+// ==================================
+
+
+    items: MenuItem[] = [];
+
 
     //   ======================================
 
@@ -246,6 +253,57 @@ export class AppComponent {
 
 // ============================
     ngOnInit() {
+
+
+        this.items = [
+            {
+                label: 'Navigate',
+                items: [{
+                    label: 'Personal',
+                    url: '#'
+                },
+                {
+                    label: 'Business',
+                    routerLink: '#'
+                }
+            ]},
+            {
+                label: 'Navigate',
+                items: [{
+                    label: 'Send Money',
+                    url: '#'
+                },
+                {
+                    label: 'Converter',
+                    url: '#'
+                },
+                {
+                    label: 'Currency API',
+                    url: '#'
+                },
+                {
+                    label: 'Tools',
+                    url: '#'
+                },
+                {
+                    label: 'Resources',
+                    url: '#'
+                }
+            ]},
+            {
+                label: 'Navigate',
+                items: [{
+                    label: 'Sign in',
+                    url: '#'
+                },
+                {
+                    label: 'Register',
+                    url: '#'
+                }
+            ]}
+        ];
+
+
         this.kp = [
             {
                 label: 'Personal',

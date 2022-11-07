@@ -23,13 +23,13 @@
   <div class="container">
     <div class="logoContainer">
       <img src="/assets/images/xe.png" alt="Logo">
-    <div class="firstMenu">
-      <ul>
-        <li><a href="">Personal</a></li>
-        <li><a href="">|</a></li>
-        <li><a href="">Business</a></li>
-      </ul>
-    </div>
+      <div class="firstMenu">
+        <ul>
+          <li><a href="">Personal</a></li>
+          <li><a href="">|</a></li>
+          <li><a href="">Business</a></li>
+        </ul>
+      </div>
     </div>
     <div class="middleMenuContainer menu">
       <ul>
@@ -44,9 +44,14 @@
       <a href="">Sign In</a>
       <a href="" class="register">Register</a>
     </div>
+
+    <button type="button" pButton icon="pi pi-bars" (click)="menu.toggle($event)" class="button"></button>
+    <p-menu #menu [popup]="true" [model]="items"></p-menu>
+
   </div>
 
 </header>
+
 
 <div class="coverContainer">
   <h1>Xe Currency Converter</h1>
@@ -115,8 +120,8 @@
         </ng-template>
       </p-dropdown>
       <label class="lable" for="locale-us" style="color:black;font-weight:bold;">To</label>
-      <p-dropdown [options]="countries" [(ngModel)]="selectedCountry2" optionLabel="name" [filter]="true" filterBy="name"
-        [showClear]="true" placeholder="Select a Country" class="cascade">
+      <p-dropdown [options]="countries" [(ngModel)]="selectedCountry2" optionLabel="name" [filter]="true"
+        filterBy="name" [showClear]="true" placeholder="Select a Country" class="cascade">
         <ng-template pTemplate="selectedItem">
           <div class="country-item country-item-value" *ngIf="selectedCountry2">
             <!-- <img src="assets/showcase/images/demo/flag/flag_placeholder.png"
@@ -132,13 +137,14 @@
       </p-dropdown>
 
       <!-- ========================================== -->
-      
+
     </div>
-      <div class="result">
-        <h1 style="font-family:sans-serif">Result : {{totalAngularPackages}}</h1>
-      </div>
     <div class="footer">
       <p-button label="Convert" (onClick)="callApi()"></p-button>
     </div>
+    <div class="result">
+      <h1 style="font-family:sans-serif">Result : {{totalAngularPackages}}</h1>
+    </div>
+    
   </p-card>
 </div>

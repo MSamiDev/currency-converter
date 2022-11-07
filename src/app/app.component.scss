@@ -1,37 +1,35 @@
-
-
-body{
+body {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
 }
 
 // .header {
-   // .menuBar{
-   //    position: absolute;
-   //    width: 100vw;
-   //    border: none;
-   //    background-color: transparent;
-   //    font-family: "Whyte", -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-   // }
-   // .middleMenu {
-   //    display: flex;
-   //    justify-content: center;
-   //    align-items: center;
-   //    position: absolute;
-   //    top: 25px;
-   //    left: 50%;
-   //    transform: translateX(-50%);
-   //    font-family: "Whyte", -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+// .menuBar{
+//    position: absolute;
+//    width: 100vw;
+//    border: none;
+//    background-color: transparent;
+//    font-family: "Whyte", -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+// }
+// .middleMenu {
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//    position: absolute;
+//    top: 25px;
+//    left: 50%;
+//    transform: translateX(-50%);
+//    font-family: "Whyte", -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 
-   //    button {
-   //       margin: 0px 10px 0px 10px;
-   //       background-color: blue;
-   //    }
-   // }
+//    button {
+//       margin: 0px 10px 0px 10px;
+//       background-color: blue;
+//    }
+// }
 
 
-   
+
 // }
 
 .header {
@@ -40,77 +38,143 @@ body{
    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
    background-color: #0a146e;
 
-   }
-
    .container {
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
-       width: 100vw;
-       padding: 10px 40px 10px 40px;
-       .logoContainer {
-           display: flex;
-           align-items: center;
-           img {
-               margin: 5px 5px 5px 15px;
-               height: 70px;
-           }
-           h2 {
-               margin: 5px 15px 5px 15px;
-               font-size: 30px;
-           }
-           ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100vw;
+      padding: 10px 40px 10px 40px;
+
+      .logoContainer {
+         display: flex;
+         align-items: center;
+
+         img {
+            margin: 5px 5px 5px 15px;
+            height: 70px;
+         }
+
+         h2 {
+            margin: 5px 15px 5px 15px;
+            font-size: 30px;
+         }
+
+         ul {
             display: flex;
             align-items: center;
+
             li {
-                margin: 5px 15px 5px 5px;
-                font-size: 18px;
-                list-style-type: none;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                a {
-                    text-decoration: none;
-                    color: #fff;
-                }
-            }
-        }
-       }
-       .menu {
-           ul {
-               display: flex;
-               align-items: center;
-               li {
-                   margin: 5px 15px 5px 15px;
-                   font-size: 18px;
-                   list-style-type: none;
-                   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                   a {
-                       text-decoration: none;
-                       color: white;
-                   }
-               }
-           }
-       }
-       .login {
-           a {
-               text-decoration: none;
+               margin: 5px 15px 5px 5px;
                font-size: 18px;
+               list-style-type: none;
                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-               color: white;
-               margin: 5px 10px 5px 10px;
-               padding: 10px 20px 10px 20px;
-           }
-           .register{
-               background: color hsl(211, 90%, 50%);
-               color: white;
-               border-radius: 10px;
-           }
-       }
+
+               a {
+                  text-decoration: none;
+                  color: #fff;
+               }
+            }
+         }
+      }
+
+      .menu {
+         ul {
+            display: flex;
+            align-items: center;
+
+            li {
+               margin: 5px 15px 5px 15px;
+               font-size: 18px;
+               list-style-type: none;
+               font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+               a {
+                  text-decoration: none;
+                  color: white;
+               }
+            }
+         }
+      }
+
+      .login {
+         a {
+            text-decoration: none;
+            font-size: 18px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+            margin: 5px 10px 5px 10px;
+            padding: 10px 20px 10px 20px;
+         }
+
+         .register {
+            background: color hsl(211, 90%, 50%);
+            color: white;
+            border-radius: 10px;
+         }
+      }
+
+      .button {
+         display: none;
+         position: absolute;
+         top: 30px;
+         right: calc(25px + 0.2vw);
+         padding: 0.5rem;
+         z-index: 2;
+
+         .p-button {
+            color: black;
+
+         }
+      }
+
+      // .button {
+      //    display: none;
+      //    // position: absolute;
+      //    top: 2rem;
+      //    right: calc(20px + 0.2vw);
+      //    padding: 0.5rem;
+      //    z-index: 2;
+
+      //    .p-button {
+      //       color: black;
+
+      //    }
+      // }
+   }
+}
+
+
+
+@media (max-width: 992px) {
+   .header {
+      .container {
+         padding: 10px 10px 10px 10px;
+         .firstMenu {
+            display: none;
+         }
+
+         .middleMenuContainer {
+            display: none;
+         }
+
+         .loginContainer {
+            display: none;
+         }
+
+         .button {
+            display: block;
+
+         }
+      }
+
+
    }
 
+}
 
 .coverContainer {
-   background: rgb(8, 109, 224);
    background: #0a146e;
+   width: 100vw;
    height: 380px;
    display: flex;
    flex-direction: column;
@@ -137,6 +201,43 @@ body{
    }
 }
 
+@media (max-width: 992px) {
+   .coverContainer {
+      background: #0a146e;
+      width: 100vw;
+      height: 380px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+         font-size: 26px;
+         text-transform: capitalize;
+         text-align: center;
+         font-family: "Whyte", -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+         position: relative;
+         top: -50px;
+         color: #fff;
+         font-weight: 600;
+         line-height: 1.3;
+         font-size: 2.4rem;
+      }
+
+      h2 {
+         font-size: 18px;
+         font-family: "Whyte", -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+         position: relative;
+         top: -70px;
+         color: #fff;
+         font-weight: 400;
+         text-align: center;
+
+      }
+   }
+
+}
+
 .cardContainer {
    position: relative;
    top: -100px;
@@ -146,9 +247,9 @@ body{
    flex-direction: column;
    justify-content: center;
    align-items: center;
- 
+
    .pCard {
-    
+
       width: 50vw;
       // box-shadow: 0 10px 20px 0 rgba(1,0,1,0.2);
       display: flex;
@@ -156,41 +257,121 @@ body{
       align-items: center;
       flex-direction: row;
 
-      .amount{
+      .amount {
          display: flex;
          justify-content: center;
          align-items: center;
          margin: 50px 30px 50px 30px;
-         .lable{
-         margin: 50px 20px 50px 20px;
+
+         .lable {
+            margin: 50px 20px 50px 20px;
          }
       }
-      .converter-card{
-         .converter-card-tabs{
-            .p-tabmenuitem{
+
+      .converter-card {
+         .converter-card-tabs {
+            .p-tabmenuitem {
                width: 70px;
             }
          }
       }
-      .cascadContainer{
+
+      .cascadContainer {
          display: flex;
          justify-content: center;
          align-items: center;
          margin: 50px 30px 50px 30px;
-         .cascade{
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         margin: 50px 30px 50px 30px;
+
+         .cascade {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 30px 50px 30px;
+         }
       }
+
+   }
+
+   .footer {
+      margin-left: 900px;
+   }
+
+   // .items2 {
+   //    align-items: center;
+   // }
+}
+
+@media (max-width: 992px){
+   .cardContainer {
+      position: relative;
+      top: -100px;
+      display: flex;
+      font-family: "Whyte", -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      color: black;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   
+      .pCard {
+   
+         // box-shadow: 0 10px 20px 0 rgba(1,0,1,0.2);
+         width: 90vw;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+   
+         .amount {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px 20px 20px 20px;
+   
+            .lable {
+               margin: 20px 20px 20px 20px;
+            }
+         }
+   
+         .converter-card {
+            width: 80vw;
+           
+         }
+   
+         .cascadContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px 20px 20px 20px;
+   
+            .cascade {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex-direction: column;
+               margin: 20px 20px 20px 20px;
+            }
+         }
+      
+         .result{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+         }
+   
+      }
+      .footer {
+         margin-left: 0px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
       }
       
-   }
-   .footer
-   {
-    margin-left: 900px;
-   }
-   .items2 {
-      align-items: center;
+   
+    
    }
 }

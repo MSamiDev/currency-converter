@@ -13,6 +13,8 @@ import {CascadeSelectModule} from 'primeng/cascadeselect';
 import { DropdownModule } from 'primeng/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import {MenuModule} from 'primeng/menu';
+
 
 
 @NgModule({
@@ -31,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     CascadeSelectModule,
     DropdownModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MenuModule
 
 
   ],
