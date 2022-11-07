@@ -1,6 +1,6 @@
 import { style } from '@angular/animations';
 import { NgTemplateOutlet } from '@angular/common';
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, ViewEncapsulation} from '@angular/core';
 import { DropdownModule } from 'primeng/dropdown';
 import { MenuItem, PrimeIcons } from 'primeng/api';
 import { SelectItem } from 'primeng/api';
@@ -21,7 +21,8 @@ interface City {
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    styleUrls: ['./app.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
     static selectedCountry: any;
@@ -247,7 +248,7 @@ export class AppComponent {
         console.log("click")
         this.converter.getData(this.selectedCountry, this.selectedCountry2).subscribe(data => {
             console.log(data);
-            this.totalAngularPackages = data * this.value2;
+            this.totalAngularPackages = (data * this.value2).toFixed(3);
         })
     }
 

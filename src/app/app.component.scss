@@ -149,6 +149,7 @@ body {
    .header {
       .container {
          padding: 10px 10px 10px 10px;
+
          .firstMenu {
             display: none;
          }
@@ -301,7 +302,7 @@ body {
    // }
 }
 
-@media (max-width: 992px){
+@media (max-width: 992px) {
    .cardContainer {
       position: relative;
       top: -100px;
@@ -311,67 +312,95 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-   
+
       .pCard {
-   
+
          // box-shadow: 0 10px 20px 0 rgba(1,0,1,0.2);
          width: 90vw;
          display: flex;
          justify-content: center;
          align-items: center;
          flex-direction: column;
-   
+
+
          .amount {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            margin: 20px 20px 20px 20px;
-   
+            margin: 20px 0px 20px 0px;
+            width: 100%;
+
+            p-inputnumber,
+            .p-inputnumber {
+               width: 100%;
+
+            }
+
+            
             .lable {
-               margin: 20px 20px 20px 20px;
+               margin: 20px 0px 20px 0px;
             }
          }
-   
+
          .converter-card {
             width: 80vw;
-           
+
          }
-   
+
          .cascadContainer {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            margin: 20px 20px 20px 20px;
-   
+            margin: 20px 0px 20px 0px;
+
             .cascade {
                display: flex;
                justify-content: center;
                align-items: center;
                flex-direction: column;
-               margin: 20px 20px 20px 20px;
+               margin: 20px 0px 20px 0px;
+               width: 100%;
+               .cascade1.p-dropdown{
+                  width: 100%;
+
+               }
             }
          }
-      
-         .result{
+
+         .result {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
 
          }
-   
+
       }
+
       .footer {
          margin-left: 0px;
+         margin: 20px 0px 20px 0px;
+
+         width: 100%;
          display: flex;
          justify-content: center;
          align-items: center;
          flex-direction: column;
+
+         .button {
+            width: 100%;
+            .buttonClass.p-button {
+               width: 100%;
+            }
+         }
+
+
+
       }
-      
-   
-    
+
+
+
    }
 }

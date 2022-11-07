@@ -65,7 +65,7 @@
     </div>
     <div class="p-field p-col-12 p-md-3 amount">
       <label class="lable" for="locale-us" style="color:black;font-weight:bold;">Amount</label>
-      <p-inputNumber [(ngModel)]="value2" inpudId="locale-us" mode="decimal" locale="en-US" [minFractionDigits]="2">
+      <p-inputNumber [(ngModel)]="value2" inpudId="locale-us" mode="decimal" locale="en-US" [minFractionDigits]="2" class="ammount_input" styleClass="ammount_input">
       </p-inputNumber>
     </div>
     <div class="cascadContainer">
@@ -105,7 +105,7 @@
 
       <label class="lable" for="locale-us" style="color:black;font-weight:bold;">From</label>
       <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [filter]="true" filterBy="name"
-        [showClear]="true" placeholder="Select a Country" class="cascade">
+        [showClear]="true" placeholder="Select a Country" class="cascade" styleClass="cascade1">
         <ng-template pTemplate="selectedItem">
           <div class="country-item country-item-value" *ngIf="selectedCountry">
             <!-- <img src="assets/showcase/images/demo/flag/flag_placeholder.png"
@@ -121,7 +121,7 @@
       </p-dropdown>
       <label class="lable" for="locale-us" style="color:black;font-weight:bold;">To</label>
       <p-dropdown [options]="countries" [(ngModel)]="selectedCountry2" optionLabel="name" [filter]="true"
-        filterBy="name" [showClear]="true" placeholder="Select a Country" class="cascade">
+        filterBy="name" [showClear]="true" placeholder="Select a Country" class="cascade" styleClass="cascade1">
         <ng-template pTemplate="selectedItem">
           <div class="country-item country-item-value" *ngIf="selectedCountry2">
             <!-- <img src="assets/showcase/images/demo/flag/flag_placeholder.png"
@@ -140,7 +140,7 @@
 
     </div>
     <div class="footer">
-      <p-button label="Convert" (onClick)="callApi()"></p-button>
+      <p-button label="Convert" (onClick)="callApi()" styleClass="buttonClass" class="button"></p-button>
     </div>
     <div class="result">
       <h1 style="font-family:sans-serif">Result : {{totalAngularPackages}}</h1>
